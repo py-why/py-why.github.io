@@ -1,0 +1,26 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: home
+description: >-
+  PyWhy’s mission is to build an open-source ecosystem for causal machine learning 
+  that moves forward the state-of-the-art and makes it available to practitioners 
+  and researchers. We build and host interoperable libraries, tools, and other 
+  resources spanning a variety of causal tasks and applications, connected through 
+  a common API on foundational causal operations and a focus on the end-to-end 
+  analysis process.
+hero-image: 'assets/NextGenNetwork.webp'
+---
+
+<section>
+  <div class="narrative">
+  {% include markdown.html path='content/section-introduction.md' %}
+  </div>
+</section>
+
+<section>
+  <h2>Recent stories</h2>
+  {% include stories.html limit=3 %}
+  <a href="/stories.html">See more stories &rarr;</a>
+</section>

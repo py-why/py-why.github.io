@@ -1,0 +1,19 @@
+<div class="story-cards">
+    {% for post in site.posts limit:{{include.limit}} %}
+        <div class="story-card">
+            <div class="story-card-header"
+                {% if post.hero-image %}style="background-image: url({{post.hero-image}}){% endif %}">    
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <h2 class="story-card-title">{{ post.title }}</h2>
+                    <p class="author">{{ post.author }}</p>
+                </a>
+            </div>
+            <div class="story-card-content">
+                <p class="excerpt">{{post.excerpt}}</p>
+                <p class="date">{{ post.date | date_to_string }}</p>
+            </div>
+        </div>
+        
+    {% endfor %}
+    
+</div>

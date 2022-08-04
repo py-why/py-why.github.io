@@ -1,0 +1,18 @@
+{% if hero %}
+<div class="hero" style="background-image:url({{hero}})">
+    <div class="hero-overlay">
+    <div class="title-block">
+      {% if page.title %}
+      <div class="title">
+        {{ page.title }}
+      </div>
+      {% endif %}
+      <div class="description">
+        {{ page.description }}
+      </div>
+      <div>
+  </div>
+    </div>
+  </div>
+</div>
+{% endif %}

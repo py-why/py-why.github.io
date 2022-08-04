@@ -1,0 +1,10 @@
+---
+title: Article Title
+layout: blog
+author: Your name
+permalink: /permament-link.html
+excerpt: >-
+  Mulit-line Summary 
+  of the article
+hero-image: assets/article-image.jpeg
+---

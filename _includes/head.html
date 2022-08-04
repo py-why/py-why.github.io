@@ -1,0 +1,26 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="{{ "assets/css/styles.css" | prepend: site.baseurl }}">
+
+	<script src=
+		"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+
+<script>
+	$(document).ready(function(){
+
+		// set scrolling opacity on the header so heros run to the top
+		{% if page.hero-image %}
+	   $(window).scroll(function(){
+		   $('header').css("background", `rgba(34,34,34,${($(window).scrollTop() / 600)})`)
+	   })
+	   {% else %}
+	   $('header').css("background", `rgba(34,34,34,1)`)
+	   $('.page-content').css("margin-top", '80px')
+	   {% endif %}
+	   
+	   // highlight the active nav link in the header
+	   $(`a[href='${window.location.pathname}']`).css('border-bottom', '3px solid rgb(45, 142, 251)')
+   })
+</script>
+</head>

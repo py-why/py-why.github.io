@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
+
+  <div class="layout">
+    
+    {% include hero-blog.html %}
+
+    <div class="page-content">
+      {{ content }}
+
+      <div class="back-link">
+        <a href="/stories.html">&larr; stories</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  {% include footer.html %}
+
+</body>
+
+</html>

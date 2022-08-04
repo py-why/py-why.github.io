@@ -1,0 +1,4 @@
+<div class="card">
+    {% capture content-path %}{{include.path}}{% endcapture %}
+    {% include markdown.html path={{content-path}} %}
+</div>

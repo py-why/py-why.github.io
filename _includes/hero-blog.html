@@ -1,0 +1,20 @@
+<div class="hero-blog" style="background-image:url({{hero}})">
+    <div class="hero-overlay">
+    <div class="title-block">
+      <div class="title-blog">
+        {{ page.title }}
+      </div>
+      <div class="description">
+        {{ page.description }}
+      </div>
+      <div>
+      <div class="author">
+          {{ page.author }}
+      </div>
+      <div class="date">
+          {{ page.date | date_to_string }}
+      </div>
+  </div>
+    </div>
+  </div>
+</div>
