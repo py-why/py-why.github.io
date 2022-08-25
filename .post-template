@@ -1,0 +1,12 @@
+---
+title: Article Title
+slug: url-friendly-article-name
+layout: page
+description: short description
+summary: >-
+  Mulit-line Summary 
+  of the article
+image: assets/article-image.jpeg
+image-alt: image alt
+link: optional-external-link-used-by-cards
+---

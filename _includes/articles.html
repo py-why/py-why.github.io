@@ -1,0 +1,58 @@
+{% assign collection = site.collections | find: "label", {{include.collection}} %}
+{% if collection %}
+    {% assign docs = collection.docs %}
+    {% if include.sort-by %}
+        {% assign docs = docs | sort: {{include.sort-by}} %}
+    {% endif %}
+    {% if include.sort-order == "desc" %}
+        {% assign docs = docs | reverse %}
+    {% endif %}
+{% endif %}
+
+<div class="articles">
+    {% if collection %}
+        {% for post in docs limit:{{include.limit}} %}
+        {% if post.link %}
+            {% assign location = post.link %}
+            {% assign target = "_blank" %}
+        {% elsif collection.output %}
+            {% assign location = post.url %}
+            {% assign target = "_self" %}
+        {% endif %}
+        {% if post.summary %}
+          {% assign excerpt = post.summary %}
+        {% else %}
+          {% assign excerpt = post.description %}
+        {% endif %}
+            <article>
+                <div class="article-header">
+                        <a href="{{location}}" target="{{target}}">
+                            <h2>{{ post.title }}</h2>
+                        </a>
+                    </div>
+                    <div class="article-content">
+                        {% if post.image and post.image-alt %}
+                            <!-- <div class="article-image" style="background-image: url({{post.image}})">    
+                            </div> -->
+                            <img class="article-image" src="{{post.image}}" alt="{{post.image-alt}}">
+                        {% endif %}
+                        <div class="article-excerpt">
+                            <p>
+                               {{ excerpt }}
+                            </p>
+                            {% if location %}
+                            <p>
+                                <a href="{{location}}" target="{{target}}">
+                                    Continue reading.
+                                </a> 
+                            </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <hr />
+                </article>
+            
+        {% endfor %}
+    {% endif %}
+    
+</div>
