@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  jekyll: 
+    image: jekyll/jekyll:4.2.2
+    container_name: pywhy
+    command: jekyll serve --force_polling --livereload
+    ports:
+        - 4000:4000
+        - 35729:35729
+    volumes:
+        - ./:/srv/jekyll

@@ -1,0 +1,15 @@
+{% assign hero = page.image %}
+
+{% if hero and page.title %}
+<div class="hero" style="background-image:url({{hero}})">
+    <div class="hero-overlay">
+    <div class="title-block">
+        <h1>
+          {{ page.title }}
+        </h1>
+      <div>
+  </div>
+    </div>
+  </div>
+</div>
+{% endif %}

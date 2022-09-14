@@ -1,0 +1,42 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="{{ "assets/css/styles.css" | prepend:
+  site.baseurl }}"> <link rel="stylesheet" href="{{
+  "assets/css/code-highlighter.css" | prepend: site.baseurl }}">
+  <base href="{{ site.baseurl }}" />
+  {% if page.title %}
+  <title>{{page.title | strip_html}}</title>
+  {% else %}
+  <title>PyWhy</title>
+  {% endif %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var area = window.location.pathname.split("/")[1];
+
+      area = area ? area.replace(/\.html$/i, "") : "";
+
+      // highlight the active nav link in the header
+      if (area === "") {
+        $(`.nav > a[href='${area}']`).css(
+          "border-bottom",
+          "3px solid rgb(45, 142, 251)"
+        );
+        $(`nav > ul > li > a[href='${area}']`).css(
+          "border-bottom",
+          "3px solid rgb(45, 142, 251)"
+        );
+      } else {
+        $(`.nav > a[href^='${area}']`).css(
+          "border-bottom",
+          "3px solid rgb(45, 142, 251)"
+        );
+        $(`nav > ul > li > a[href^='${area}']`).css(
+          "border-bottom",
+          "3px solid rgb(45, 142, 251)"
+        );
+      }
+    });
+  </script>
+</head>

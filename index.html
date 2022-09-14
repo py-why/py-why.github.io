@@ -1,0 +1,72 @@
+---
+layout: home
+title: >-
+  An Open-source Ecosystem for <br />
+  Causal Machine Learning
+image: "assets/NextGenNetwork.webp"
+---
+
+<section class="flex-column">
+  <div class="intro">
+    <h2>Why PyWhy?</h2>
+    {% include markdown.html path="content/why_pywhy.md" %}
+  </div>
+  <div class="divider">
+    <hr />
+  </div>
+</section>
+
+<!-- 
+  Placeholder until key features & capabilities content is ready.
+
+  <section class="flex-column">
+  <h2>Key Features & Capabilities</h2>
+  <div style="max-width: 700px;">
+    <hr />
+  </div>
+</section> -->
+
+<section class="flex-column">
+  <h2>Install</h2>
+  {% include markdown.html path="content/quick_install.md" %}
+  <a href="install.html">In-depth instructions &rarr;</a>
+  <div class="divider">
+    <hr />
+  </div>
+</section>
+
+<section class="flex-column">
+  <h2>Learn</h2>
+  {% include cards.html collection="learn" limit=4 %}
+  <a href="learn/developer-resources.html"
+    >More learning opportunities &rarr;</a
+  >
+  <div class="divider">
+    <hr />
+  </div>
+</section>
+
+<!-- 
+  Placeholder until Ecosystem content is ready
+
+  <section class="flex-column">
+  <h2>Ecosystem</h2>
+  <div style="max-width: 700px;">
+    <hr />
+  </div>
+</section> -->
+
+<section class="flex-column">
+  <h2>Case Studies</h2>
+  {% include cards.html collection="case_studies" sort-order="desc" limit=4 %}
+  <a href="learn/case-studies.html">See more case studies &rarr;</a>
+  <div class="divider">
+    <hr />
+  </div>
+</section>
+
+<section class="flex-column">
+  <h2>News</h2>
+  {% include cards.html collection="news" sort-order="desc" limit=4 %}
+  <a href="news.html">See more news &rarr;</a>
+</section>

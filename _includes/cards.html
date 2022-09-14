@@ -1,0 +1,44 @@
+{% assign collection = site.collections | find: "label", {{include.collection}} %}
+{% if collection %}
+    {% assign docs = collection.docs | sort: "date" %}
+    {% if include.sort-by %}
+        {% assign docs = docs | sort: {{include.sort-by}} %}
+    {% endif %}
+    {% if include.sort-order == "desc" %}
+        {% assign docs = docs | reverse %}
+    {% endif %}
+{% endif %}
+
+<div class="cards">
+    {% if collection %}
+        {% for post in docs limit:{{include.limit}} %}
+            {% if post.link %}
+                {% assign location = post.link %}
+                {% assign target = "_blank" %}
+            {% elsif collection.output %}
+                {% assign location = post.url %}
+                {% assign target = "_self" %}
+            {% endif %}
+            {% if location %}<a href="{{location}}" target="{{target}}">{% endif %}
+                <div class="card shadow">
+                    {% if post.image %}
+                        <div class="card-header" style="background-image: url({{post.image}})">    
+                        </div>
+                    {% endif %}
+                    <div class="card-content">
+                        <h3 class="card-title">{{ post.title }}</h3>
+                        <p class="excerpt">
+                            {% if post.description %}
+                                {{ post.description }}
+                            {% else %}
+                                {{ post.summary }}
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            {% if location %}</a>{% endif %}
+            
+        {% endfor %}
+    {% endif %}
+    
+</div>

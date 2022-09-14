@@ -1,0 +1,434 @@
+--- 
+--- 
+$primary: rgb(45, 142, 251);
+// $primary: #2372cb;
+$text: #444;
+$text-dark: #333;
+$text-darker: #222;
+$text-medium: #555;
+$text-light: #777;
+$text-lighter: #999;
+$text-header: #425066;
+// $link: #40b7e4;
+$link: #2372cb;
+$link-inverse: #288eff;
+$background: #fefefe;
+$background-inverse: #efefef;
+$text-inverse: #eee;
+$border-light: #ddd;
+$border-lighter: #e4e4e4;
+$border-medium: #aaa;
+$overlay-background: rgba(0,0,0,0.5);
+$header-height: 60px;
+$footer-height: 40px;
+$footer-background: #222;
+$footer-font-size: 0.9rem;
+$section-margin: 40px;
+$side-padding: 30px;
+$card-border-radius: 18px;
+
+/**
+* Defaults
+**/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+			sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+  background-color: $background;
+  color: $text;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-header;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $primary;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.4em;
+  color: $primary;
+  margin: 48px 0 48px 0;
+  text-align: center;
+}
+
+hr {
+  margin: $section-margin 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid $border-light;
+}
+
+/**
+* Utility classes
+**/
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.shadow {
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 6px 12px -2px, rgba(0, 0, 0, 0.2) 0px 3px 7px -3px;
+  // box-shadow: none;
+  transition: all ease 0.2s;
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider>hr {
+  max-width: 700px;
+}
+
+/**
+* Site header
+**/
+
+.header-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid $border-light;
+  box-shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
+  background-color: #fefefe;
+  z-index: 1000;
+}
+
+header {
+  height: $header-height;
+  padding: 0px $side-padding 0px $side-padding;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10000;
+}
+
+.site-title {
+  height: 100%;
+}
+
+.site-title > a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 100%;
+}
+
+.site-title > a > img {
+  height: 50px;
+}
+
+.site-title > a > h1 {
+  padding: 0;
+  margin: 0;
+  color: $text-darker;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+}
+
+/**
+* Top site navigation
+**/ 
+
+nav, 
+nav > ul, 
+nav > ul > li {
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+nav > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+}
+
+nav li a {
+  display: block;
+  color: $text-medium;
+  padding-bottom: 3px;
+  border-bottom: transparent solid 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+nav li a:hover {
+  color: $text-darker;
+}
+
+nav > ul > li > ul {
+  background-color: $background;
+  border: 1px solid $border-light;
+  border-top: 1px solid $background;
+  box-shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  width: 220px;
+  position: absolute;
+  top: $header-height;
+  left: -15px;
+}
+
+nav > ul > li:hover>ul,
+nav > ul > li:focus-within>ul,
+nav > ul > li > ul:hover,
+nav > ul > li > ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+nav > ul > li > ul > li {
+  display: block;
+}
+
+nav > ul > li > ul > li > a {
+  padding: 6px 15px;
+}
+
+/**
+* Page Layout
+**/
+
+.layout {
+  margin-top: $header-height;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+}
+
+section {
+  width: 100%;
+}
+
+.page-content {
+  max-width: 800px;
+  padding: $section-margin 0;
+  margin: 0 auto;
+}
+
+.intro {
+  max-width: 800px;
+  text-align: center;
+  margin-top: $section-margin;
+}
+
+.home-content>section:last-child {
+  padding-bottom: $section-margin;
+  margin-bottom: $section-margin;
+}
+
+
+/**
+* Hero Image
+**/
+
+.hero {
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $overlay-background;
+}
+
+.title-block {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title-block > h1 {
+  color: $text-inverse;
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+/**
+* Cards
+**/
+
+.cards {
+  padding: 0 0 40px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25px;
+}
+
+.cards > a {
+  color: inherit;
+}
+
+.card {
+  background-color: $background;
+  padding: 0;
+  max-width: 320px;
+  min-width: 200px;
+  border: 1px solid #ddefef;
+  border-radius: $card-border-radius;
+}
+
+.cards > a:hover > .shadow {
+  box-shadow: rgba(50, 50, 93, 0.2) 0px 9px 27px 0px, rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;
+  transition: all ease 0.2s;
+}
+
+.card-header {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-title {
+  color: $primary;
+}
+
+.card-content {
+  padding: 18px;
+}
+
+/**
+* Articles
+**/
+
+.article-content {
+  display: flex;
+  gap: 40px;
+}
+
+.article-excerpt > p:first-child {
+  margin-top: 0;
+}
+
+.article-image {
+  max-width: 300px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  border-radius: $card-border-radius;
+}
+
+/**
+* Footer
+**/
+
+footer {
+  height: $footer-height;
+  background-color: $footer-background;
+  color: $text-inverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $footer-font-size;
+}
+
+footer div {
+  display: inline;
+}
+
+footer > div > div {
+  padding: 0 20px;
+}
+
+footer > div::after {
+  content: '|';
+}
+
+footer > div:last-child::after {
+  content: none;
+}
+
+footer a,
+footer a:hover {
+  color: $link-inverse;
+}
+
+footer > a::after {
+  content: "|";
+}

@@ -1,0 +1,4 @@
+{%if include.selector%}<{{include.selector}} {%if include.classes%}class="{{include.classes}}" {%endif%}
+	{%if include.id%}id="{{include.id}}{%endif%}">{%endif%}
+	{% capture markdown %}{% include_relative {{include.path}} %}{% endcapture %}{{ markdown | markdownify }}
+	{%if include.selector%}</{{include.selector}}>{%endif%}
