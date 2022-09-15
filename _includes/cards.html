@@ -1,5 +1,5 @@
 {% assign collection = site.collections | find: "label", {{include.collection}} %}
-{% if collection %}
+{% if collection and collection.docs %}
     {% assign docs = collection.docs | sort: "date" %}
     {% if include.sort-by %}
         {% assign docs = docs | sort: {{include.sort-by}} %}
@@ -10,7 +10,7 @@
 {% endif %}
 
 <div class="cards">
-    {% if collection %}
+    {% if docs %}
         {% for post in docs limit:{{include.limit}} %}
             {% if post.link %}
                 {% assign location = post.link %}
