@@ -13,6 +13,6 @@ summary: >-
   and other identification methods, and estimation of the conditional effect (CATE) through an integration with the EconML library.
 image: assets/dowhy-schematic.png
 image-alt: DoWhy | An end-to-end library for causal inference
-link: https://py-why.github.io/dowhy/v0.8/getting_started/intro.html
+link: https://py-why.github.io/dowhy/
 ---
 
