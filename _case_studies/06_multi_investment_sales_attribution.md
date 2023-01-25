@@ -1,21 +1,12 @@
 ---
-jupyter:
-  language_info:
-    codemirror_mode:
-      name: ipython
-      version: 3
-    file_extension: .py
-    mimetype: text/x-python
-    name: python
-    nbconvert_exporter: python
-    pygments_lexer: ipython3
-    version: 3.8.10
+title: Multi-investment Attribution - Distinguish the Effects of Multiple Outreach Efforts
+description: A tutorial on using various PyWhy tools to execute a causal modeling workflow.
+summary: A tutorial on using various PyWhy tools to execute a causal modeling workflow.
+link: https://github.com/py-why/py-why.github.io/blob/main/_case_studies/artifacts/06_multi_investment_sales_attribution/Multi-investment Sales Attribution.ipynb
 ---
 
 ::: {.cell .markdown}
-```{=html}
-<h1 align="left">Multi-investment Attribution: Distinguish the Effects of Multiple Outreach Efforts</h1>
-```
+
 `<img src="https://www.microsoft.com/en-us/research/uploads/prod/2020/05/Attribution.png" width="400">`{=html}
 
 A software company would like to know whether its multiple outreach
