@@ -32,6 +32,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.repository == 'py-why/py-why.github.io' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
@@ -46,5 +47,4 @@ jobs:
 
     steps:
       - name: Deploy
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: actions/deploy-pages@v1
