@@ -1,0 +1,12 @@
+---
+title: We're co-organizing a KDD workshop on causal inference and machine learning
+description: >-
+  Causal inference at scale presented at NABE.
+summary: >-
+  This workshop aims to bring together researchers and practitioners from academia and industry to share their experiences and insights on applying causal inference and machine learning techniques to real-world problems in the areas of product, brand, policy, and beyond. The workshop welcomes original research that covers machine learning theory, deep learning, causal inference, and online learning. Additionally, the workshop encourages topics that address scalable system design, algorithm bias, and interpretability.
+  
+link: https://causal-machine-learning.github.io/kdd2023-workshop/ 
+image: assets/kdd-conf.png
+image-alt: Causal Inference and Machine Learning in Practice
+date: 2023-05-01
+---
