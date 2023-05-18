@@ -103,8 +103,6 @@ We use GitHub Actions to build and publish the package and documentation.  To cr
 3. Manually run the publish_docs.yml workflow to build and publish the documentation.
 4. Under https://github.com/py-why/EconML/releases, create a new release with a corresponding tag, and update the release notes.
 
-
-
 <br/>
 <br/>
 <br/>
