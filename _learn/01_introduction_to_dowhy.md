@@ -15,4 +15,3 @@ image: assets/dowhy-schematic.png
 image-alt: DoWhy | An end-to-end library for causal inference
 link: https://py-why.github.io/dowhy/
 ---
-
