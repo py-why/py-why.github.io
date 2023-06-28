@@ -353,8 +353,8 @@ section {
 .card-header {
   height: 200px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right bottom;
+  background-size: contain;
+  background-position: center;
   border-top-left-radius: $card-border-radius;
   border-top-right-radius: $card-border-radius;
 }
@@ -392,6 +392,7 @@ section {
   background-size: cover;
   background-position: right bottom;
   border-radius: $card-border-radius;
+  object-fit: contain;
 }
 
 /**
