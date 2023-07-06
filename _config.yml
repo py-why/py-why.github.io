@@ -43,6 +43,10 @@ collections:
     output: false
     permalink: /:collection/:title
     sort_by: path
+  community:
+    output: false
+    permalink: /:collection/:title
+    sort_by: path
 
 # Build settings
 markdown: kramdown
