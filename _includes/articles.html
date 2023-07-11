@@ -32,21 +32,18 @@
                     </div>
                     <div class="article-content">
                         {% if post.image and post.image-alt %}
+                            {% if post.link %}
+                                <a href="{{post.link}}"><img class="article-image" src="{{post.image}}" alt="{{post.image-alt}}"></a>
+                            {% else %}
+                                <img class="article-image" src="{{post.image}}" alt="{{post.image-alt}}">
+                            {% endif %}
                             <!-- <div class="article-image" style="background-image: url({{post.image}})">    
                             </div> -->
-                            <img class="article-image" src="{{post.image}}" alt="{{post.image-alt}}">
                         {% endif %}
                         <div class="article-excerpt">
                             <p>
                                {{ excerpt }}
                             </p>
-                            {% if location %}
-                            <p>
-                                <a href="{{location}}" target="{{target}}">
-                                    Continue reading.
-                                </a> 
-                            </p>
-                            {% endif %}
                         </div>
                     </div>
                     <hr />

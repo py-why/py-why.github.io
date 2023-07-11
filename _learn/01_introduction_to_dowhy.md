@@ -11,6 +11,13 @@ summary: >-
   refutation API that can automatically test causal assumptions for any estimation method, thus making inference more robust and 
   accessible to non-experts. DoWhy supports estimation of the average causal effect for backdoor, frontdoor, instrumental variable 
   and other identification methods, and estimation of the conditional effect (CATE) through an integration with the EconML library.
+
+  <br>
+  <br>
+  <a href="https://www.pywhy.org/dowhy">DoWhy Documentation</a>
+  <br>
+  <a href="https://github.com/py-why/dowhy">DoWhy GitHub Repository</a>
+  
 image: assets/dowhy-schematic.png
 image-alt: DoWhy | An end-to-end library for causal inference
 link: https://py-why.github.io/dowhy/
