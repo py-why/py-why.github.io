@@ -1,5 +1,5 @@
 ---
-title: Optimizing Promotional Offers using Causal Machine Learning
+title: Using PyWhy in Databricks
 layout: page
 description: >-
   An end-to-end causal machine learning application in the Databricks ecosystem.
