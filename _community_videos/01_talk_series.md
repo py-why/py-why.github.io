@@ -1,15 +1,12 @@
 ---
-title: PyWhy Causality in Practice | LLMs for causal inference
+title: LLMs for causal inference
 slug: pywhy-video
 layout: page
 description: >-
-  PyWhy community Discord and meeting schedule. 
+  PyWhy Causality in Practice - LLMs for causal inference 
 summary: >-
 
   Emre Kiciman, Senior Principal Researcher at Microsoft, talks about pywhy-llm, a new experimental library that focuses on using large language models for causality.
-  <br>
-  <br>
-  PyWhy Causality in Practice is a new talk series focusing on causality and machine learning, especially from a practical perspective. We'll have tutorials and presentations about PyWhy libraries but also talks by external speakers working on causal inference.
   <br>
   <br>
 
