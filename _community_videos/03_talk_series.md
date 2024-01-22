@@ -1,5 +1,5 @@
 ---
-title: Causal Representation Learning: Discovery of the Hidden World
+title: "Causal Representation Learning: Discovery of the Hidden World"
 slug: pywhy-video
 layout: page
 description: >-
