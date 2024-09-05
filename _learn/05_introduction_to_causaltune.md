@@ -15,7 +15,7 @@ summary: >-
   
   <br>
   <br>
-  <a href="https://www.pywhy.org/causaltune/">CausalTune Documentation</a>
+  <a href="https://causaltune.readthedocs.io/en/latest/">CausalTune Documentation</a>
   <br>
   <a href="https://github.com/py-why/causaltune">CausalTune GitHub Repository</a>
   
