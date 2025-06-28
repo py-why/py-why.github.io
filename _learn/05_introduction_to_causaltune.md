@@ -21,5 +21,5 @@ summary: >-
   
 image: assets/pywhy-logo.png
 image-alt: CausalTune | A library for automated causal inference model estimation and selection
-link: https://www.pywhy.org/causaltune/
+link: https://causaltune.readthedocs.io/en/latest/
 ---
